@@ -9,8 +9,11 @@ namespace SEP_DataAPI.Model
 {
     public class Account 
     {
+    [JsonProperty]
     private String userName;
+    [JsonProperty]
     private String password;
+    [JsonProperty]
     private bool IsAdmin;
 
     public Account(String userName, String password, bool isAdmin) {

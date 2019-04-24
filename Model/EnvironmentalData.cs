@@ -9,9 +9,13 @@ namespace SEP_DataAPI.Model
 {
     public class EnvironmentalData
     {
+    [JsonProperty]
     private String location;
+    [JsonProperty]
     private double CO2;
+    [JsonProperty]
     private double temperature;
+    [JsonProperty]
     private String time;
 
     public EnvironmentalData(String location, double CO2, double temperature, String time) {

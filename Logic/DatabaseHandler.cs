@@ -1,18 +1,21 @@
-using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using SEP_DataAPI.Model;
 
 namespace SEP_DataAPI.Logic
 {
     public class DatabaseHandler
     {
-        public void getAllAccs()
+        public List<Account> getAllAccs()
         {
+            List<Account> list = new List<Account>();
+            Account acc = new Account("Joe", "Joe's pw", false);
+            Account acc2 = new Account("Joe2", "Joe's pw2", false);
 
+            list.Add(acc);
+            list.Add(acc2);
+
+            return list;
         }
 
         public void getAccById(int id)
