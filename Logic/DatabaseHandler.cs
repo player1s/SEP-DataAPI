@@ -34,9 +34,16 @@ namespace SEP_DataAPI.Logic
             System.Console.WriteLine("remove ready");
         }
 
-        public void getEnvironmentalData()
+        public List<EnvironmentalData> getAllEnvironmentalData()
         {
-            
+            List<EnvironmentalData> list = new List<EnvironmentalData>();
+            EnvironmentalData aTestEnvironmentalData1 = new EnvironmentalData("D304", 767, 24, "2012");
+            EnvironmentalData aTestEnvironmentalData2 = new EnvironmentalData("C201", 891, 22, "2013");
+
+            list.Add(aTestEnvironmentalData1);
+            list.Add(aTestEnvironmentalData2);
+
+            return list;
         }
 
     }

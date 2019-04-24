@@ -9,8 +9,8 @@ namespace SEP_DataAPI.Controllers
     [ApiController]
     public class RemoveAccountController : ControllerBase
     {
-        // Get /RemoveAccount
-        [HttpGet]
+        // Get /RemoveAccount/43
+        [HttpGet("{id}")]
         public void Get(int id)
         {
             DatabaseHandler dbHandler = new DatabaseHandler();

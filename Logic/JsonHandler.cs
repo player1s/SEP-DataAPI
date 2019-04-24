@@ -13,6 +13,13 @@ namespace SEP_DataAPI.Logic
             return Json;
         }
 
+        public string serializeEnvironmentalData(List<EnvironmentalData> list)
+        {
+
+            string Json = JsonConvert.SerializeObject(list);
+            return Json;
+        }
+
         public Account deSerializeAccount(string json)
         {
             Account account = (Account) JsonConvert.DeserializeObject(json);
