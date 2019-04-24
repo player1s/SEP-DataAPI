@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using System.Collections;
 using Newtonsoft.Json;
 using SEP_DataAPI.Model;
 
@@ -10,6 +6,18 @@ namespace SEP_DataAPI.Logic
 {
     public class JsonHandler
     {
-        
+        public string serializeAccounts(ArrayList list)
+        {
+            string Json = JsonConvert.SerializeObject(list);
+            return Json;
+        }
+
+        public Account deSerializeAccount(string json)
+        {
+            Account account = (Account) JsonConvert.DeserializeObject(json);
+            return account;
+        }
+
+
     }
 }
