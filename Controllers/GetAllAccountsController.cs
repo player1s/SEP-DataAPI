@@ -1,16 +1,11 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using SEP_DataAPI.Logic;
 using SEP_DataAPI.Model;
 
 namespace SEP_DataAPI.Controllers
 {
-        // controller for endpoint ~/api/Login in the webAPI
+    // controller for endpoint ~/api/Login in the webAPI
 
     [Route("[controller]")]
     [ApiController]
