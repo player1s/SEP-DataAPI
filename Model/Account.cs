@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+
+namespace SEP_DataAPI.Model
+{
+    public class Account 
+    {
+    private String userName;
+    private String password;
+    private bool IsAdmin;
+
+    public Account(String userName, String password, bool isAdmin) {
+        this.userName = userName;
+        this.password = password;
+        this.IsAdmin = isAdmin;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public bool isAdmin() {
+        return IsAdmin;
+    }
+
+    public void setAdmin(bool admin) {
+        IsAdmin = admin;
+    }
+    }
+}
