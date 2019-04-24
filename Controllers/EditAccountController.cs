@@ -5,12 +5,11 @@ using SEP_DataAPI.Model;
 
 namespace SEP_DataAPI.Controllers
 {
-    // controller for endpoint ~/api/Login in the webAPI
-
     [Route("[controller]")]
     [ApiController]
     public class EditAccountController : ControllerBase
     {
+        // Post /EditAccount
         [HttpPost]
         public void Post([FromBody] string value)
         {

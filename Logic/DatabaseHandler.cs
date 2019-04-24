@@ -25,12 +25,13 @@ namespace SEP_DataAPI.Logic
 
         public void editAccount(Account Account)
         {
-            
+            System.Console.WriteLine("edit ready");
+
         }
 
         public void removeAccount(int id)
         {
-            
+            System.Console.WriteLine("remove ready");
         }
 
         public void getEnvironmentalData()
