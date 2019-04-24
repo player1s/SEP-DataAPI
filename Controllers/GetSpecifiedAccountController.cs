@@ -14,21 +14,23 @@ namespace SEP_DataAPI.Controllers
 
     [Route("[controller]")]
     [ApiController]
-    public class GetAllAccountsController : ControllerBase
+    public class GetAccountController : ControllerBase
     {
-        // GET /GetAllAccounts
-        [HttpGet]
-        public ActionResult<string> Get()
+        // GET /GetAccount/1
+         [HttpGet("{id}")]
+        public ActionResult<string> Get(int id)
         {
             DatabaseHandler dbHandler = new DatabaseHandler();
             JsonHandler jsonHandler = new JsonHandler();
             List<Account> list = new List<Account>();
             string json = "";
 
-            list = dbHandler.getAllAccs();
+            
+            list.Add(dbHandler.getAccById(id));
             json = jsonHandler.serializeAccounts(list);
 
             return json;
-        }        
+            
+        }  
     } 
 }

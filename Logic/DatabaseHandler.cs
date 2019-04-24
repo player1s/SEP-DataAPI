@@ -18,9 +18,10 @@ namespace SEP_DataAPI.Logic
             return list;
         }
 
-        public void getAccById(int id)
+        public Account getAccById(int id)
         {
-            
+            Account acc = new Account("Joe's sample acc that got queried", "Joe's pw", false);
+            return acc;
         }
 
         public void editAccount(Account Account)
