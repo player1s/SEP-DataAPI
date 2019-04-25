@@ -5,23 +5,21 @@ using SEP_DataAPI.Model;
 
 namespace SEP_DataAPI.Controllers
 {
-    // controller for endpoint ~/api/Login in the webAPI
-
     [Route("[controller]")]
     [ApiController]
-    public class GetAllAccountsController : ControllerBase
+    public class AllEnvironmentalDataController : ControllerBase
     {
-        // GET /GetAllAccounts
+        // Get /AllEnvironmentalData
         [HttpGet]
-        public ActionResult<string> Get()
+        public string Get()
         {
             DatabaseHandler dbHandler = new DatabaseHandler();
             JsonHandler jsonHandler = new JsonHandler();
-            List<Account> list = new List<Account>();
+            List<EnvironmentalData> list = new List<EnvironmentalData>();
             string json = "";
 
-            list = dbHandler.getAllAccs();
-            json = jsonHandler.serializeAccounts(list);
+            list = dbHandler.getAllEnvironmentalData();
+            json = jsonHandler.serializeEnvironmentalData(list);
 
             return json;
         }        

@@ -9,9 +9,9 @@ namespace SEP_DataAPI.Controllers
 
     [Route("[controller]")]
     [ApiController]
-    public class GetAccountController : ControllerBase
+    public class AccountController : ControllerBase
     {
-        // GET /GetAccount/1
+        // GET /Account/1
          [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {

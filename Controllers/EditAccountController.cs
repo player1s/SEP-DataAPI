@@ -10,8 +10,8 @@ namespace SEP_DataAPI.Controllers
     public class EditAccountController : ControllerBase
     {
         // Post /EditAccount
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPut]
+        public void Put([FromBody] string value)
         {
             DatabaseHandler dbHandler = new DatabaseHandler();
             JsonHandler jsonHandler = new JsonHandler();

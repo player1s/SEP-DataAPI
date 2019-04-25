@@ -7,9 +7,9 @@ namespace SEP_DataAPI.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class GetShutLEDController : ControllerBase
+    public class ShutLEDController : ControllerBase
     {
-        // GET /GetShutLED
+        // GET /ShutLED
         // HTTP request receiver for shutting down the LED
         [HttpGet]
         public void Get()
