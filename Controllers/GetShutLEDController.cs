@@ -5,13 +5,12 @@ using SEP_DataAPI.Model;
 
 namespace SEP_DataAPI.Controllers
 {
-    // controller for endpoint ~/api/Login in the webAPI
-
     [Route("[controller]")]
     [ApiController]
     public class GetShutLEDController : ControllerBase
     {
         // GET /GetShutLED
+        // HTTP request receiver for shutting down the LED
         [HttpGet]
         public void Get()
         {

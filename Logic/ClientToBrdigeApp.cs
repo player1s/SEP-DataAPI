@@ -11,6 +11,7 @@ namespace SEP_DataAPI.Logic
     {
         public ClientToBridgeApp() { }
         
+        // Sends a basic get request to the specified URL
         public async void GetShutLED()
         {
             string url = "https://localhost:5001/api/login/";
